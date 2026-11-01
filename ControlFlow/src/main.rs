@@ -1,0 +1,44 @@
+fn main() {
+    let number:i32 = 100;
+
+    //If block
+    if number % 2 == 0
+    {
+        println!("Even Number");
+    }else{
+        println!("Odd Number");
+    }
+
+    //Loop
+    let mut counter:i32 = 0;
+    let result:i32 = loop{
+        counter += 1;
+        if counter == 5 {
+            break counter
+        }  
+    };
+
+    println!("Loop Counter >> {}", result);
+
+    //While-loop
+    println!("Assigning result {} to whilecounter", result);
+    let mut whileCounter:i32 = result;
+    while whileCounter!=0 {
+        println!("whileCounter --> {}", whileCounter);
+        whileCounter-=1;
+    }
+
+    println!("After while Counter >> {}", result);
+
+    //For-Loop
+    for Loop_cnt in 1..result {
+        println!("For Loop iteration...{}", Loop_cnt);
+    }
+
+    //Array-forloop
+
+    let marks: [i32; 3] = [100, 90, 80];
+    for mark in marks{
+        println!("Mark is {}",mark);
+    }
+}
